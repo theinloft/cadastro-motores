@@ -1,0 +1,8 @@
+<h3>Relatorio de Vendas</h3>
+
+<div *ngFor="let v of vendas">
+  <h5>{{v.nota}}</h5>
+  <p>{{v.data}}</p>
+  <p>{{v.cliente}}</p>
+  <p>{{v.motor.nome}}"-"{{v.motor.preco|moeda}}</p>
+</div>

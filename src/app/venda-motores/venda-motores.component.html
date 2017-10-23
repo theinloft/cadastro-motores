@@ -1,0 +1,24 @@
+<h3>Venda de Motores</h3>
+<div class="form">
+  <form>
+
+    <label for="nota">Nota</label>
+    <input id="nota" disabled [value]="venda.nota"> 
+    <br />
+    <label for="data">Data</label>
+    <input id="data" disabled [value]="venda.data | date:'dd/MM/yyyy '"> 
+    <br />
+    <label for="cliente">Nome do Cliente</label>
+    <input id="cliente" name="cliente" [(ngModel)]="venda.cliente"> 
+    <br />
+    <label for="motores">Motor</label>
+    <select name="motores" id="motores" [(ngModel)]="venda.motor">
+      <option *ngFor="let m of motores" [ngValue]="m">
+        {{m.nome}}
+      </option>
+    </select>
+    <br />
+    <input type="button" (click)="salvarVenda()" value="Realizar Venda">
+    
+  </form>
+</div>

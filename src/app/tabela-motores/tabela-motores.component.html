@@ -1,0 +1,18 @@
+<h3>{{titulo}}</h3>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Descrição</th>
+    <th>Uso</th>
+    <th>Preço</th>
+    <th>Data Criação</th>
+  </tr>
+  <tr *ngFor="let motor of motores">
+    <td>{{motor.nome}}</td>
+    <td>{{motor.descricao}}</td>
+    <td>{{motor.uso | uppercase}}</td>
+    <td>{{motor.preco | moeda}}</td>
+    <!-- currency:'BRL':true -->
+    <td>{{motor.dataCriacao | date:'dd/MM/yyyy'}}</td>
+  </tr>
+</table>
